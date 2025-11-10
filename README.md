@@ -13,7 +13,7 @@ dora run solver=jasco/chords_drums dataset.batch_size=2 dataset.num_workers=0 lo
 #### Rewards Extraction
 - [x] CLAP
 - [x] Audiobox aesthetics
-- [x] HuBERT likelihood
+- [x] Semantic Consistency Reward (MusicFM based)
 - [x] MRSD impl.
 
 ```
