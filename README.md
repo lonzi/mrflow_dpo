@@ -17,7 +17,7 @@ dora run solver=jasco/chords_drums dataset.batch_size=2 dataset.num_workers=0 lo
 - [x] MRSD impl.
 
 ```
-python -m src/construct_mrsd_dataset.py --samples_dir AUDIOCRAFT_XP_OF_STAGE_1/samples/1/
+python src/construct_mrsd_dataset.py --samples_dir AUDIOCRAFT_XP_OF_STAGE_1/samples/1/
 ```
 
 ### Stage 3 - DPO Solver
