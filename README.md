@@ -27,6 +27,7 @@ python src/construct_mrsd_dataset.py --samples_dir AUDIOCRAFT_XP_OF_STAGE_1/samp
 
 ```
 cd YOUR_LOCAL_AUDIOCRAFT_REPO_PATH
+
 dora run solver=flow_dpo/flow_dpo_jasco continue_from=//pretrained/facebook/jasco-chords-drums-400M
 ```
 
