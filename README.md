@@ -22,6 +22,7 @@ python src/construct_mrsd_dataset.py --samples_dir AUDIOCRAFT_XP_OF_STAGE_1/samp
 
 ### Stage 3 - DPO Solver
 - [x] DPO impl.
+
 [note: first you need to copy the content from dpo_audiocraft dir into your local audiocraft repo]
 
 ```
