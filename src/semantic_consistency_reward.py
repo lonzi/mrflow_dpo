@@ -36,15 +36,11 @@ class SemanticConsistencyReward:
             wavs = []
             for wav_i, src_sr_i in zip(src_wavs, src_sr, strict=False):
                 if src_sr_i != self.model_sample_rate:
-                    wav_i = torchaudio.transforms.Resample(
-                        src_sr_i, self.model_sample_rate
-                    )(wav_i)
+                    wav_i = torchaudio.transforms.Resample(src_sr_i, self.model_sample_rate)(wav_i)
                 wavs.append(wav_i)
             wav = torch.stack(wavs)
             wav = wav.to(self.device)
-            assert wav.ndim == 2 or wav.ndim == 3, (
-                f"Waveform must be 2 or 3 dimensional, got {wav.ndim}"
-            )
+            assert wav.ndim == 2 or wav.ndim == 3, f"Waveform must be 2 or 3 dimensional, got {wav.ndim}"
             if wav.ndim == 3:
                 wav = wav.squeeze(1)
             unmasked_logits, unmasked_hidden_emb = self.musicfm.get_predictions(wav)
@@ -63,21 +59,14 @@ class SemanticConsistencyReward:
             bs, seq_len, _ = logits[quantizer_name].shape
             masking_rate_per_sample = [len(x) / seq_len for x in probs_of_masked]
             masked_semantic_consistency_per_sample = [
-                x.mean() * masking_rate_per_sample[i]
-                for i, x in enumerate(probs_of_masked)
+                x.mean() * masking_rate_per_sample[i] for i, x in enumerate(probs_of_masked)
             ]
-            masked_semantic_consistency = (
-                torch.stack(masked_semantic_consistency_per_sample).cpu().numpy()
-            )
+            masked_semantic_consistency = torch.stack(masked_semantic_consistency_per_sample).cpu().numpy()
 
             return [
                 {
-                    "unmasked_semantic_consistency": float(
-                        unmasked_semantic_consistency[i]
-                    ),
-                    "masked_semantic_consistency": float(
-                        masked_semantic_consistency[i]
-                    ),
+                    "unmasked_semantic_consistency": float(unmasked_semantic_consistency[i]),
+                    "masked_semantic_consistency": float(masked_semantic_consistency[i]),
                 }
                 for i in range(bs)
             ]
