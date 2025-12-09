@@ -1,0 +1,9 @@
+.vscode/
+wandb/
+*.json
+*.log
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.pyc
