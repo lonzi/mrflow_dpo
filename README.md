@@ -21,7 +21,7 @@ python src/construct_mrsd_dataset.py --samples_dir AUDIOCRAFT_XP_OF_STAGE_1/samp
 ```
 
 ### Stage 3 - DPO Solver
-- [ ] DPO impl.
+- [x] DPO impl.
 
 ### Stage 4 - Metrics
 - [ ] BPM std
