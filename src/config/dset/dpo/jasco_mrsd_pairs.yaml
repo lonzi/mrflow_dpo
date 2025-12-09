@@ -1,0 +1,10 @@
+# @package __global__
+
+datasource:
+  max_sample_rate: 44100
+  max_channels: 2
+
+  train: egs/jasco_mrsd_pairs/train
+  valid: egs/jasco_mrsd_pairs/val
+  evaluate: egs/jasco_mrsd_pairs/test
+  generate: egs/jasco_mrsd_pairs/test
