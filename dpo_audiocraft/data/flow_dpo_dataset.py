@@ -187,6 +187,4 @@ class FlowDPODataset(DPOMusicDataset):
         frame_chords = self._get_chords(music_info, effective_segment_dur)
         jasco_info.chords = SymbolicCondition(frame_chords=frame_chords)
 
-        # # get melody
-        # jasco_info.melody = SymbolicCondition(melody=self.melody_module(music_info))
         return wav, negative_wav, jasco_info

@@ -38,7 +38,7 @@ deadlock:
 
 dataset:
   segment_duration: 10
-  batch_size: 336
+  batch_size: 32
   sample_on_weight: false  # Uniform sampling all the way
   sample_on_duration: false  # Uniform sampling all the way
   compression_model_framerate: ${compression_model_framerate}

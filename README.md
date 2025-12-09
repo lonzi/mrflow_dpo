@@ -1,5 +1,5 @@
 # MR-FlowDPO
-Source code for "MR-FLOWDPO: Multi-Reward Direct Preference Optimization for Flow-Matching Text-to-Music Generation".
+Official source code for "MR-FLOWDPO: Multi-Reward Direct Preference Optimization for Flow-Matching Text-to-Music Generation".
 
 ### Stage 1 - Reference Model Sampling
 - [ ] Multiple generations per prompt
@@ -22,6 +22,12 @@ python src/construct_mrsd_dataset.py --samples_dir AUDIOCRAFT_XP_OF_STAGE_1/samp
 
 ### Stage 3 - DPO Solver
 - [x] DPO impl.
+[note: first you need to copy the content from dpo_audiocraft dir into your local audiocraft repo]
+
+```
+cd YOUR_LOCAL_AUDIOCRAFT_REPO_PATH
+dsolver=flow_dpo/flow_dpo_jasco continue_from=//pretrained/facebook/jasco-chords-drums-400M
+```
 
 ### Stage 4 - Metrics
 - [ ] BPM std
