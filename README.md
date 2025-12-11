@@ -1,5 +1,11 @@
 # MR-FlowDPO
-Official source code for "MR-FLOWDPO: Multi-Reward Direct Preference Optimization for Flow-Matching Text-to-Music Generation".
+Official source code for "MR-FLOWDPO: Multi-Reward Direct Preference Optimization for Flow-Matching Text-to-Music Generation" - by Alon Ziv, Sanyuan Chen, Andros Tjandra, Yossi Adi, Wei-Ning Hsu, and Bowen Shi.
+
+Paper:
+https://arxiv.org/abs/TODO
+
+Project Page:
+https://lonzi.github.io/mr_flowdpo_demopage/
 
 Note: 
 In order to use this code you should clone two additional repositories:
@@ -36,7 +42,7 @@ TODO
 
 ## MR-FlowDPO - HOW-TO
 ### Stage 0 - Setup
-[ ] Add requirements.txt
+- [ ] Add requirements.txt
 
 ### Stage 1 - Reference Model Sampling
 - [ ] Multiple generations per prompt
