@@ -281,13 +281,10 @@ def find_mrsd_pairs(
     )
     os.makedirs(os.path.dirname(mrsd_pairs_pkl_fpath), exist_ok=True)
     print(f"mrsd_pairs_pkl_fpath: {mrsd_pairs_pkl_fpath}")
-    # if os.path.exists(mrsd_pairs_pkl_fpath):
-    #     print(
-    #         f"MRSD pairs already extracted and saved to "
-    #         f"{mrsd_pairs_pkl_fpath}"
-    #     )
-    #     with open(mrsd_pairs_pkl_fpath, "rb") as f:
-    #         return pickle.load(f)
+    if os.path.exists(mrsd_pairs_pkl_fpath):
+        print(f"MRSD pairs already extracted and saved to {mrsd_pairs_pkl_fpath}")
+        with open(mrsd_pairs_pkl_fpath, "rb") as f:
+            return pickle.load(f)
 
     primary_reward_2_mrsd_pairs = {r: [] for r in args.rewards}
     for prompt, samples in tqdm.tqdm(samples_by_prompt.items()):
