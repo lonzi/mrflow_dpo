@@ -1,8 +1,7 @@
-# Copyright (c) Meta Platforms, Inc. and affiliates.
-# All rights reserved.
-#
-# This source code is licensed under the license found in the
-# LICENSE file in the root directory of this source tree.
+# NOTE: This file is based on implementations from audiocraft's solvers:
+# https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/solvers/*.py
+# In order to use it,
+# this file should be copied into your local audiocraft repo to ../audiocraft/solvers/flow_dpo.py
 
 
 import flashy

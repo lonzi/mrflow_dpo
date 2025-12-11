@@ -1,5 +1,10 @@
 # @package __global__
 
+# This file is based on implementations from audiocraft's configs:
+# https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/config/dset/
+# In order to use it,
+# this file should be copied into your local audiocraft repo to ../audiocraft/config/dset/dpo/jasco_mrsd_pairs.yaml
+
 datasource:
   max_sample_rate: 44100
   max_channels: 2

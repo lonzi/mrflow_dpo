@@ -1,8 +1,13 @@
 # @package __global__
 
-# This is the training loop solver
-# for the base MusicGen model (text-to-music)
-# on monophonic audio sampled at 32 kHz
+# This file is based on implementations from audiocraft's configs:
+# https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/config/solver/*.yaml
+# In order to use it,
+# this file should be copied into your local audiocraft repo to ../audiocraft/config/solver/flow_dpo/flow_dpo_jasco.yaml
+
+# Solver for a fine-tuning of JASCO (text-to-music) with 
+# Multi-Reward Direct Preference Optimization (MR-FlowDPO) on an
+# MRSD (Multi-Reward Strong Domination) dataset.
 
 defaults:
   - musicgen/default
@@ -17,10 +22,6 @@ solver: flow_dpo
 autocast: true
 autocast_dtype: float16
 
-# EnCodec large trained on mono-channel music audio sampled at 32khz
-# with a total stride of 640 leading to 50 frames/s.
-# rvq.n_q=4, rvq.bins=2048, no quantization dropout
-# (transformer_lm card and n_q must be compatible)
 compression_model_checkpoint: //pretrained/facebook/encodec_32khz
 # precomputed mean std accross training data sub-partition
 compression_model_latent_std: 4.0102

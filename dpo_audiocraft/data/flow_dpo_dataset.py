@@ -1,8 +1,8 @@
-# Copyright (c) Meta Platforms, Inc. and affiliates.
-# All rights reserved.
-#
-# This source code is licensed under the license found in the
-# LICENSE file in the root directory of this source tree.
+# This file is based on implementations from audiocraft's datasets:
+# https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/data/*.py
+# In order to use it,
+# this file should be copied into your local audiocraft repo to ../audiocraft/data/flow_dpo_dataset.py
+
 import bisect
 import gzip
 import json

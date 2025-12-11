@@ -1,6 +1,43 @@
 # MR-FlowDPO
 Official source code for "MR-FLOWDPO: Multi-Reward Direct Preference Optimization for Flow-Matching Text-to-Music Generation".
 
+Note: 
+In order to use this code you should clone two additional repositories:
+1. Audiocraft by Meta: https://github.com/facebookresearch/audiocraft/tree/main.
+2. MusicFM: https://github.com/minzwon/musicfm - A Foundation Model for Music Informatics, ICASSP 2024, Minz Won, Yun-Ning Hung, and Duc Le.
+
+## Citation for this work:
+MR-FlowDPO: 
+```
+TODO
+```
+## Citation for external repos:
+1. Audiocraft:
+```
+@inproceedings{copet2023simple,
+    title={Simple and Controllable Music Generation},
+    author={Jade Copet and Felix Kreuk and Itai Gat and Tal Remez and David Kant and Gabriel Synnaeve and Yossi Adi and Alexandre Défossez},
+    booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+    year={2023},
+}
+```
+2. MusicFM: 
+```
+@misc{won2023foundationmodelmusicinformatics,
+      title={A Foundation Model for Music Informatics}, 
+      author={Minz Won and Yun-Ning Hung and Duc Le},
+      year={2023},
+      eprint={2311.03318},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD},
+      url={https://arxiv.org/abs/2311.03318}, 
+}
+```
+
+## MR-FlowDPO - HOW-TO
+### Stage 0 - Setup
+[ ] Add requirements.txt
+
 ### Stage 1 - Reference Model Sampling
 - [ ] Multiple generations per prompt
 ```
@@ -22,6 +59,7 @@ python src/construct_mrsd_dataset.py --samples_dir AUDIOCRAFT_XP_OF_STAGE_1/samp
 
 ### Stage 3 - DPO Solver
 - [x] DPO impl.
+- [ ] Reward prompting.
 
 [note: first you need to copy the content from dpo_audiocraft dir into your local audiocraft repo]
 
@@ -33,4 +71,3 @@ dora run solver=flow_dpo/flow_dpo_jasco continue_from=//pretrained/facebook/jasc
 
 ### Stage 4 - Metrics
 - [ ] BPM std
-

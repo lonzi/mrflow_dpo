@@ -13,9 +13,9 @@ from audiobox_aesthetics.infer import (
 )
 from audiocraft.data.audio import audio_read
 from audiocraft.metrics import CLAPTextConsistencyMetric
+from semantic_consistency_reward import SemanticConsistencyReward
 
 import wandb
-from semantic_consistency_reward import SemanticConsistencyReward
 
 
 def extract_clap_scores(args) -> dict[str, float]:

@@ -1,3 +1,8 @@
+# This file is based on implementations from audiocraft's datasets:
+# https://github.com/facebookresearch/audiocraft/blob/main/audiocraft/data/*.py
+# In order to use it,
+# this file should be copied into your local audiocraft repo to ../audiocraft/data/dpo_dataset.py
+
 import copy
 import gzip
 import json
