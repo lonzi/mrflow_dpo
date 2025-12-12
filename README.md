@@ -15,7 +15,15 @@ In order to use this code you should clone two additional repositories:
 ## Citation for this work:
 MR-FlowDPO: 
 ```
-TODO
+@misc{ziv2025mrflowdpomultirewarddirectpreference,
+      title={MR-FlowDPO: Multi-Reward Direct Preference Optimization for Flow-Matching Text-to-Music Generation}, 
+      author={Alon Ziv and Sanyuan Chen and Andros Tjandra and Yossi Adi and Wei-Ning Hsu and Bowen Shi},
+      year={2025},
+      eprint={2512.10264},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD},
+      url={https://arxiv.org/abs/2512.10264}, 
+}
 ```
 ## Citation for external repos:
 1. Audiocraft:
