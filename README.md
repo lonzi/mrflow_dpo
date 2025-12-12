@@ -2,7 +2,7 @@
 Official source code for "MR-FLOWDPO: Multi-Reward Direct Preference Optimization for Flow-Matching Text-to-Music Generation" - by Alon Ziv, Sanyuan Chen, Andros Tjandra, Yossi Adi, Wei-Ning Hsu, and Bowen Shi.
 
 Paper:
-https://arxiv.org/abs/TODO
+https://arxiv.org/abs/2512.10264
 
 Project Page:
 https://lonzi.github.io/mr_flowdpo_demopage/
