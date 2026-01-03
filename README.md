@@ -56,7 +56,9 @@ MR-FlowDPO:
 - [ ] Multiple generations per prompt
 ```
 cd YOUR_LOCAL_AUDIOCRAFT_REPO_PATH
+```
 
+```
 dora run solver=jasco/chords_drums dataset.batch_size=2 dataset.num_workers=0 logging.log_updates=400 continue_from=//pretrained/facebook/jasco-chords-drums-400M execute_only=generate dataset.generate.num_samples=10000 generate.lm.cfg_coef_all=3.0 generate.lm.cfg_coef_txt=0.0
 ```
 
@@ -79,7 +81,9 @@ python src/construct_mrsd_dataset.py --samples_dir AUDIOCRAFT_XP_OF_STAGE_1/samp
 
 ```
 cd YOUR_LOCAL_AUDIOCRAFT_REPO_PATH
+```
 
+```
 dora run solver=flow_dpo/flow_dpo_jasco continue_from=//pretrained/facebook/jasco-chords-drums-400M
 ```
 
